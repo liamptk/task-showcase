@@ -6,6 +6,8 @@ supervisor:
   pkg:
     - installed
   service.running:
+    - enable: True
+    - reload: True
     - watch:
       - file: /etc/supervisor/conf.d/watches.conf
 
