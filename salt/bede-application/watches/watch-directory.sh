@@ -9,5 +9,5 @@
 directory=/home/bede-user/application/logging/
 
 while (inotifywait -e delete_self $directory) do
-        mkdir $directory && echo "Directory recreated. Do not delete, this is required for logging." | wall
+        mkdir $directory && chown bede-user:bede-group $directory && chmod 774 $directory && echo"Directory recreated. Do not delete, this is required for logging." | wall
 done

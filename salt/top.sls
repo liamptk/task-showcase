@@ -5,3 +5,4 @@ base:
     - users
     - directories
     - bede-application
+    - cron
